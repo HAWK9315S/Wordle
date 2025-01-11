@@ -17,6 +17,7 @@ The goal of the game is to guess a 5-letter word within six tries. After each gu
 1. Clone this repository.
 2. Install the required dependencies:{GIven Below}
 3. Click on the text Box whenever you attempt your guess.
+4. Restart the application to play again 
    
 ```bash
 pip install flet
