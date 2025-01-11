@@ -1,6 +1,6 @@
-###Individual Impact Project 1
+### Individual Impact Project 1
 
-##Project Title : Flet Wordle Clone Game
+## Project Title : Flet Wordle Clone Game
 
 This is a Flet implementation of the popular word guessing game Wordle.
 
