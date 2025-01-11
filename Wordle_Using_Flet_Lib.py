@@ -67,10 +67,14 @@ class GameInputField(UserControl):
                 if is_word == self.word:
                     # we can now generate text on the screen to display game stats
                     ROWS[6].value = f"CORRECT! The word was {self.word.upper()}."
+                    ROWS[6].color = "#00ff00"
+                    ROWS[6].weight = "bold"
                     ROWS[6].update()
                 # next we check if the player has run out of guesses/lines => these are probably the same so one variable would be fine
                 elif self.line > 5 or self.guess < 1:
                     ROWS[6].value = f"Sorry! You've run out of Tries. The word was {self.word.upper()}. Try again!"
+                    ROWS[6].color = "#dc143c"
+                    ROWS[6].weight = "bold"
                     ROWS[6].update()
                     print("No More Tries")
 
@@ -114,10 +118,14 @@ class GameInputField(UserControl):
             # let's handle submit errors
             else:
                 ROWS[6].value = f"Must be a valid word. Try again!"
+                ROWS[6].color = "#ff6700"
+                ROWS[6].weight = "bold"
                 ROWS[6].update()
 
         else:
             ROWS[6].value = f"Word must be a 5-letters long. Try again!"
+            ROWS[6].color = "#ff6700"
+            ROWS[6].weight = "bold"
             ROWS[6].update()
 
         # clear the entry
@@ -158,7 +166,7 @@ class GameInputField(UserControl):
                                 hint_text="Type a 5-letter word...",
                                 text_align="center",
                                 on_submit=lambda e: self.get_letters(e),
-                                on_focus=lambda e: self.clear_errors(e),
+                                on_focus=lambda e: self.clear_error(e),
                             ),
                         ],
                     ),
@@ -213,7 +221,8 @@ class GameGrid(UserControl):
 
 # our main game function
 def main (page: Page):
-    # some dimenstions
+    # some dimenstions and application name
+    page.title = "Wordle"
     page.horizontal_alignment = "center"
     page.vertical_alignment = "center"
 
@@ -236,7 +245,7 @@ def main (page: Page):
             controls=[
                 Row(
                     alignment=MainAxisAlignment.CENTER,
-                    controls=[Text("Wordle",size=25, weight="bold")],
+                    controls=[Text("Wordle",size=30, weight="bold", font_family="Cambria")],
                 ),
                 Row(
                     alignment=MainAxisAlignment.CENTER,
@@ -245,6 +254,7 @@ def main (page: Page):
                             "Popular Word Game Clone Made Using Python & Flet",
                             size=11,
                             weight="bold",
+                            font_family="Cambria",
                             color=colors.WHITE54,
                         )
                     ],
