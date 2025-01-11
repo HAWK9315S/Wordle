@@ -2,7 +2,7 @@
 
 ## Project Title : Flet Wordle Clone Game
 
-This is a Flet implementation of the popular word guessing game Wordle.
+This project implements a clone of the popular word-guessing game Wordle using Pysthon DSA and Flet library. Players attempt to guess a five-letter word within six tries. After each guess, the letters are color-coded to indicate correctness (green for correct position, yellow for correct letter but wrong position, and gray for incorrect letter). The game includes a user-friendly interface, responsive animations, and helpful error messages to enhance the gameplay experience
 
 ## How to Play
 
