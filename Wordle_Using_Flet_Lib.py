@@ -245,19 +245,43 @@ def main (page: Page):
             controls=[
                 Row(
                     alignment=MainAxisAlignment.CENTER,
-                    controls=[Text("Wordle",size=30, weight="bold", font_family="Cambria")],
+                    controls=[Text("Wordle",size=60, weight="bold", font_family="Cambria")],
                 ),
                 Row(
                     alignment=MainAxisAlignment.CENTER,
                     controls=[
                         Text(
                             "Popular Word Game Clone Made Using Python & Flet",
-                            size=11,
+                            size=22,
                             weight="bold",
                             font_family="Cambria",
                             color=colors.WHITE54,
                         )
                     ],
+                
+                ),
+                Row(
+                    alignment=MainAxisAlignment.CENTER,
+                    controls=[
+                        Text(
+                            "How To Play: Guess a five-letter word in six tries!",
+                            size=12,
+                            font_family="Cambria",
+                            color=colors.WHITE,
+                        )
+                    ],
+                ),
+                Row(
+                    alignment=MainAxisAlignment.CENTER,
+                    controls=[
+                        Text(
+                            "(green for correct position, yellow for correct letter, gray for incorrect).",
+                            size=12,
+                            font_family="Cambria",
+                            color=colors.WHITE,
+                        )
+                    ],
+                
                 ),
                 # I'll skip the rules text UI.
                 Divider(height=20, color=colors.TRANSPARENT),
